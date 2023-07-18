@@ -2,7 +2,7 @@ FROM alpine:3.16@sha256:bc41182d7ef5ffc53a40b044e725193bc10142a1243f395ee852a8d9
 
 # renovate: datasource=github-tags depName=zerotier/ZeroTierOne tag=1.10.1
 ENV ZEROTIER_COMMIT=651f45fe29155c462f4e56dd74f4a347f6861d0d
-
+WORKDIR /app
 RUN apk add --no-cache build-base linux-headers
 
 RUN set -eux; \
